@@ -1,15 +1,11 @@
-@font-face {
-    font-family: 'CubeCavern';
-    src: url('../assets/fonts/cube_cavern.ttf') format('truetype');
-}
-.main-container {
+.game-container {
     width: 100vw;
     height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
-.background-image {
+.game-bg {
     width: 100%;
     height: 100%;
     object-fit: cover;

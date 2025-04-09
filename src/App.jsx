@@ -16,9 +16,14 @@ function App() {
   const handleThrow = () => setScreen('throw-ending')
   const handlePick = () => setScreen('pick-ending')
 
+  const handleNo = () => {
+    // 나중에 메뉴 화면이나 대기 화면으로 연결 가능
+    alert('Maybe next time!') // 임시로 alert
+  }
+
   return (
     <>
-      {screen === 'title' && <Title onYes={handleStart} />}
+      {screen === 'title' && <Title onYes={handleStart} onNo={handleNo} />}
       {screen === 'loading' && <Loading />}
       {screen === 'game' && <Game onThrow={handleThrow} onPick={handlePick} />}
       {screen === 'throw-ending' && <ThrowEnding />}

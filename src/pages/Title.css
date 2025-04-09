@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'CubeCavern';
+    src: url('../assets/fonts/cube_cavern.ttf') format('truetype');
+  }
+  
+  .title-screen {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    font-family: 'CubeCavern', monospace;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    image-rendering: pixelated;
+  }
+  
+  .game-title {
+    font-size: 64px;
+    line-height: 1;
+    color: orange;
+    text-shadow: 3px 3px 0 black;
+    margin-bottom: 30px;
+  }
+  
+  .spotlight {
+    background: radial-gradient(circle at center, rgba(255,255,255,0.2), transparent 70%);
+    padding: 20px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .trash {
+    width: 80px;
+  }
+  
+  .start-box {
+    background: black;
+    border: 2px solid white;
+    padding: 20px 30px;
+    display: inline-block;
+  }
+  
+  .start-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .buttons button {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'CubeCavern', monospace;
+  }
+  
+  .buttons button:hover {
+    background: white;
+    color: black;
+  }
+  

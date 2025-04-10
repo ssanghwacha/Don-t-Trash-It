@@ -9,7 +9,11 @@ const Loading = () => {
             className="loading-screen"
             style={{ backgroundImage: `url(${loadingBg})` }}
         >
-            <img src={trashImg} alt="trash" className="trash" />
+            <img
+                src={trashImg}
+                alt="loading-trash "
+                className="loading-trash"
+            />
 
             <p className="loading-text">
                 loading<span className="dot">.</span>

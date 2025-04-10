@@ -10,7 +10,7 @@ function App() {
 
     const handleStart = () => {
         setScreen('loading');
-        // setTimeout(() => setScreen('game'), 2000)
+        setTimeout(() => setScreen('game'), 3000);
     };
 
     const handleThrow = () => setScreen('throw-ending');

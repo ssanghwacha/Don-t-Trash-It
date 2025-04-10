@@ -1,9 +1,4 @@
-@font-face {
-    font-family: 'CubeCavern';
-    src: url('../assets/fonts/cube_cavern.ttf') format('truetype');
-  }
-  
-  .title-screen {
+.title-screen {
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -16,6 +11,7 @@
     justify-content: center;
     text-align: center;
     image-rendering: pixelated;
+    font-family: 'CubeCavern', monospace;
   }
   
   .game-title {

@@ -6,20 +6,16 @@ import ThrowEnding from './pages/ThrowEnding'
 import PickEnding from './pages/PickEnding'
 
 function App() {
-  const [screen, setScreen] = useState('title') // 초기 화면은 title
+  const [screen, setScreen] = useState('title')
 
   const handleStart = () => {
     setScreen('loading')
-    setTimeout(() => setScreen('game'), 2000) // 2초 후 game 시작
+    setTimeout(() => setScreen('game'), 2000)
   }
 
   const handleThrow = () => setScreen('throw-ending')
   const handlePick = () => setScreen('pick-ending')
-
-  const handleNo = () => {
-    // 나중에 메뉴 화면이나 대기 화면으로 연결 가능
-    alert('Maybe next time!') // 임시로 alert
-  }
+  const handleNo = () => alert('Maybe next time!')
 
   return (
     <>

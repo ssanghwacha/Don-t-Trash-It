@@ -30,10 +30,8 @@
     z-index: -1;
 }
 .game-title {
-    position: absolute;
     top: 10vh; /* 💡 화면 전체 높이의 30% 지점에 위치 */
     left: 50%;
-    transform: translateX(-50%); /* 가운데 정렬 */
     font-size: 17vw;
     font-family: 'Jersey 15', sans-serif;
     color: #ff7700;
@@ -48,21 +46,23 @@
     margin-top: 0;
 }
 .start-box {
-    background: #0b0b0b; /* 완전 검정보단 약간 픽셀톤 어두운 배경 */
-    border: 2px solid #fff8c5; /* 크림색 테두리 */
-    padding: 20px 30px;
+    position: relative;
+    background: #0b0b0b;
+    border: 0.4vw solid #fff8c5;
+    padding: 3vw 18vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Jersey 15', sans-serif;
-    gap: 16px;
+    gap: 1.5vw;
     color: #fff8c5;
-    box-shadow: 2px 2px 0 black;
+    box-shadow: 0.5vw 0.5vw 0 black;
 }
 
 .start-box p {
     font-size: 50px;
     margin: 0;
+    margin-bottom: 30px;
     font-family: 'Jersey 15', sans-serif;
     color: #fff8c5;
 }
@@ -70,20 +70,55 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    bottom: 11%;
 }
 
 .buttons button {
     background: transparent;
-    border: 2px solid #fff8c5;
+    border: 0.3vw solid #fff8c5;
     color: #fff8c5;
-    padding: 8px 24px;
-    font-size: 20px;
+    font-size: 2.2vw;
     font-family: 'Jersey 15', sans-serif;
     cursor: pointer;
+    padding: 0.5vw 3vw;
     box-shadow: 2px 2px 0 black;
     transition: 0.2s ease;
 }
 
+@media (max-width: 992px) {
+    .start-box {
+        padding: 3vw 16vh;
+    }
+    .start-box p {
+        font-size: 30px;
+    }
+    .buttons button {
+        font-size: 2vw;
+        padding: 0.5vw 3vw;
+        border: 2px solid #fff8c5;
+        box-shadow: 2px 2px 0 black;
+    }
+}
+@media (max-width: 592px) {
+    .start-box {
+        padding: 2vw 6vh;
+    }
+    .start-box p {
+        font-size: 30px;
+    }
+    .buttons button {
+        font-size: 3vw;
+        padding: 0.7vw 3vw;
+        border: 2px solid #fff8c5;
+        box-shadow: 2px 2px 0 black;
+    }
+}
+@media (max-width: 420px) {
+    .start-box {
+        margin: 10vw;
+        padding: 6vw 1vh;
+    }
+}
 .buttons button:hover {
     background: #fff8c5;
     color: #0b0b0b;

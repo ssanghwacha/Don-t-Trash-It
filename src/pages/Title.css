@@ -3,7 +3,7 @@
     height: 100vh;
     background-size: cover;
     background-position: center;
-    font-family: 'CubeCavern', monospace;
+    font-family: 'Jersey 15', sans-serif;
     color: white;
     display: flex;
     flex-direction: column;
@@ -11,58 +11,80 @@
     justify-content: center;
     text-align: center;
     image-rendering: pixelated;
-    font-family: 'CubeCavern', monospace;
-  }
-  
-  .game-title {
-    font-size: 64px;
-    line-height: 1;
-    color: orange;
-    text-shadow: 3px 3px 0 black;
-    margin-bottom: 30px;
-  }
-  
-  .spotlight {
-    background: radial-gradient(circle at center, rgba(255,255,255,0.2), transparent 70%);
-    padding: 20px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-  }
-  
-  .trash {
-    width: 80px;
-  }
-  
-  .start-box {
-    background: black;
-    border: 2px solid white;
+}
+.title-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.game-title {
+    position: absolute;
+    top: 10vh; /* 💡 화면 전체 높이의 30% 지점에 위치 */
+    left: 50%;
+    transform: translateX(-50%); /* 가운데 정렬 */
+    font-size: 17vw;
+    font-family: 'Jersey 15', sans-serif;
+    color: #ff7700;
+    text-shadow: 0.5vw 0.5vw 0 black,
+        /* 💡 위쪽에만 밝은 스트로크처럼 보이게 */ 0 -0.3vw 0 #fff8c5;
+    -webkit-text-stroke: 0.3vw black; /* 굵기, 색상 */
+    text-stroke: 0.25vw black; /* 실험적, 백업용 */
+    font-weight: bold;
+    line-height: 0.8; /* 또는 1보다 작은 값으로 */
+    margin-bottom: 2vh;
+    white-space: nowrap;
+    margin-top: 0;
+}
+.start-box {
+    background: #0b0b0b; /* 완전 검정보단 약간 픽셀톤 어두운 배경 */
+    border: 2px solid #fff8c5; /* 크림색 테두리 */
     padding: 20px 30px;
-    display: inline-block;
-  }
-  
-  .start-box p {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Jersey 15', sans-serif;
+    gap: 16px;
+    color: #fff8c5;
+    box-shadow: 2px 2px 0 black;
+}
+
+.start-box p {
+    font-size: 50px;
+    margin: 0;
+    font-family: 'Jersey 15', sans-serif;
+    color: #fff8c5;
+}
+.buttons {
     display: flex;
     justify-content: center;
-    gap: 16px;
-  }
-  
-  .buttons button {
+    gap: 20px;
+}
+
+.buttons button {
     background: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 8px 20px;
-    font-size: 16px;
+    border: 2px solid #fff8c5;
+    color: #fff8c5;
+    padding: 8px 24px;
+    font-size: 20px;
+    font-family: 'Jersey 15', sans-serif;
     cursor: pointer;
-    font-family: 'CubeCavern', monospace;
-  }
-  
-  .buttons button:hover {
-    background: white;
-    color: black;
-  }
-  
+    box-shadow: 2px 2px 0 black;
+    transition: 0.2s ease;
+}
+
+.buttons button:hover {
+    background: #fff8c5;
+    color: #0b0b0b;
+}

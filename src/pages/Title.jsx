@@ -1,27 +1,31 @@
-import React from 'react'
-import './Title.css'
-import bgImage from '../assets/images/title-bg.png'
-import trashImage from '../assets/images/titletrash.png'
+import React from 'react';
+import './Title.css';
+import bgImage from '../assets/images/title-bg.png';
 
 const Title = ({ onYes, onNo }) => {
-  return (
-    <div
-      className="title-screen"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
-      <h1 className="game-title">DON’T<br />TRASH IT!</h1>
-      <div className="spotlight">
-        <img src={trashImage} alt="trash" className="trash" />
-      </div>
-      <div className="start-box">
-        <p>DO YOU WANT TO START GAME?</p>
-        <div className="buttons">
-          <button onClick={onYes}>YES</button>
-          <button onClick={onNo}>NO</button>
-        </div>
-      </div>
-    </div>
-  )
-}
+    return (
+        <div className="title-wrapper">
+            <div
+                className="bg"
+                style={{ backgroundImage: `url(${bgImage})` }}
+            ></div>
 
-export default Title
+            <div className="title-screen">
+                <h1 className="game-title">
+                    <span>DON’T</span>
+                    <br />
+                    <span>TRASH IT!</span>
+                </h1>
+
+                <div className="start-box">
+                    <p>DO YOU WANT TO START GAME?</p>
+                    <div className="buttons">
+                        <button onClick={onYes}>YES</button>
+                        <button onClick={onNo}>NO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+export default Title;

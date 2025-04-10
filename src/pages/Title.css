@@ -114,8 +114,12 @@
     }
 }
 @media (max-width: 420px) {
+    .game-title {
+        font-size: 23vw;
+        margin-bottom: 20px;
+    }
     .start-box {
-        margin: 10vw;
+        margin: 0 10vw;
         padding: 6vw 1vh;
     }
 }

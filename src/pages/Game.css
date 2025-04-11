@@ -1,73 +1,81 @@
 .game-screen {
     width: 100vw;
     height: 100vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
+    background-image: url('../assets/images/main-bg.png');
+    background-size: cover; /* ✔ 화면 채우기 */
+    background-repeat: no-repeat; /* ✔ 반복 방지 */
+    background-position: center bottom; /* ✔ 바닥 맞추기 */
 }
-
 .hearts {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 2vh;
+    left: 2vw;
+    display: flex;
+    gap: 1vw;
 }
 
 .heart {
-    width: 30px;
-    margin-right: 5px;
+    width: 5vw;
+    max-width: 50px;
+    height: auto;
 }
 
-.tree-container {
+.trash {
     position: absolute;
     bottom: 20%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 5%;
-}
-
-.tree {
-    width: 180px;
-    transition: transform 0.5s;
-}
-/*   
-  .trash {
-    position: absolute;
-    bottom: 22%;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
-    transition: transform 1s ease-out, opacity 1s ease-out;
-  } */
+    width: 15vw;
+    max-width: 150px;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
 
 .trash.throw {
-    transform: translate(-50%, -300px) rotate(100deg);
+    transform: translate(-50%, 200px); /* 아래로 떨어지는 효과 */
+    opacity: 0;
+}
+
+.trash.pick {
+    transform: translate(-50%, -100vh); /* 위로 날아감 */
     opacity: 0;
 }
 
 .buttons {
     position: absolute;
-    bottom: 8%;
+    bottom: 10vh;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 20px;
+    gap: 2vw;
 }
 
-.throw-btn,
-.pick-btn {
-    background-color: #f8b400;
-    border: 3px solid black;
-    padding: 10px 20px;
-    font-family: 'Press Start 2P', sans-serif;
-    font-size: 14px;
+button {
+    background: transparent;
+    border: 2px solid #fff8c5;
+    padding: 1vw 2vw;
+    color: #fff8c5;
+    font-size: 1.5vw;
+    font-family: 'Jersey 15', sans-serif;
     cursor: pointer;
-    color: white;
-    text-shadow: 1px 1px black;
+    box-shadow: 2px 2px 0 black;
 }
 
-.throw-btn:hover,
-.pick-btn:hover {
-    transform: scale(1.05);
+button:hover {
+    background: #fff8c5;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .heart {
+        width: 8vw;
+    }
+
+    button {
+        font-size: 3.5vw;
+        padding: 2vw 3vw;
+    }
+
+    .trash {
+        width: 25vw;
+    }
 }

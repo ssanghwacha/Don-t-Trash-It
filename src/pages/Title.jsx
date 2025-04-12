@@ -28,4 +28,5 @@ const Title = ({ onYes, onNo }) => {
         </div>
     );
 };
+
 export default Title;

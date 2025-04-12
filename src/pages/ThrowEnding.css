@@ -1,25 +1,54 @@
-.ending-screen {
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding-top: 100px;
-    font-family: 'Press Start 2P', sans-serif;
+/* .throw-ending-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: #111; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.fallen-tree {
+  width: 25vw;
+  max-width: 200px;
+  transform: rotate(90deg);
+  margin-bottom: 2rem;
+}
+
+.gameover-text {
+  color: #ffcccc;
+  font-size: 2vw;
+  font-family: 'Jersey 15', sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.restart-btn {
+  font-size: 1.2vw;
+  padding: 0.8rem 2rem;
+  background: transparent;
+  border: 2px solid #ffcccc;
+  color: #ffcccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.restart-btn:hover {
+  background: #ffcccc;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .fallen-tree {
+    width: 40vw;
   }
-  
-  .ending-tree {
-    width: 200px;
-    margin-top: 40px;
-    animation: shake 1s infinite;
+
+  .gameover-text {
+    font-size: 5vw;
   }
-  
-  @keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-10px); }
-    50% { transform: translateX(10px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
+
+  .restart-btn {
+    font-size: 4vw;
   }
-  
+} */

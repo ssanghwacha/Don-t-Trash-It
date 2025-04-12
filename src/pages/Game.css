@@ -1,55 +1,95 @@
 .game-screen {
     width: 100vw;
     height: 100vh;
-    background-image: url('../assets/images/main-bg.png');
-    background-size: cover; /* ✔ 화면 채우기 */
-    background-repeat: no-repeat; /* ✔ 반복 방지 */
-    background-position: center bottom; /* ✔ 바닥 맞추기 */
-}
-.hearts {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* 하트 */
+  .hearts {
     position: absolute;
     top: 2vh;
     left: 2vw;
     display: flex;
     gap: 1vw;
-}
-
-.heart {
+  }
+  .heart {
     width: 5vw;
     max-width: 50px;
     height: auto;
+  }
+  
+  /* 나무 */
+  .tree-wrapper {
+    position: absolute;
+    bottom: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 32vw; /* 양쪽 나무 간격 */
+    pointer-events: none;
+  }
+  .tree-overlay {
+    width: 18vw;
+    max-width: 200px;
+    height: auto;
+    transition: transform 1s ease-in-out;
+  }
+
+.fall-left,
+.fall-right {
+  transform: rotate(90deg);
+  transform-origin: center bottom;
 }
 
-.trash {
+  
+  /* 쓰레기 */
+  .trash {
     position: absolute;
     bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
     width: 15vw;
     max-width: 150px;
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.trash.throw {
-    transform: translate(-50%, 200px); /* 아래로 떨어지는 효과 */
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    z-index: 3;
+  }
+  
+  .trash.throw {
+    transform: translate(-50%, -40vh) scale(0.3);
     opacity: 0;
-}
+  }
 
-.trash.pick {
-    transform: translate(-50%, -100vh); /* 위로 날아감 */
+  .trash.pick {
+    transform: translate(-50%, 70%) scale(0.2);
     opacity: 0;
-}
-
-.buttons {
+  }
+  
+  /* 쓰레기통 */
+  .trashcan {
     position: absolute;
-    bottom: 10vh;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8vw;
+    max-width: 70px;
+    height: auto;
+    z-index: 2;
+  }
+  
+  /* 버튼 */
+  .buttons {
+    position: absolute;
+    bottom: 5vh;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 2vw;
-}
-
-button {
+  }
+  button {
     background: transparent;
     border: 2px solid #fff8c5;
     padding: 1vw 2vw;
@@ -58,24 +98,88 @@ button {
     font-family: 'Jersey 15', sans-serif;
     cursor: pointer;
     box-shadow: 2px 2px 0 black;
-}
-
-button:hover {
+  }
+  button:hover {
     background: #fff8c5;
     color: black;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  /* 모바일 대응 */
+  @media (max-width: 768px) {
     .heart {
-        width: 8vw;
+      width: 8vw;
     }
-
-    button {
-        font-size: 3.5vw;
-        padding: 2vw 3vw;
+  
+    .tree-overlay {
+      width: 30vw;
     }
-
+  
     .trash {
-        width: 25vw;
+      width: 25vw;
     }
-}
+  
+    .trashcan {
+      width: 14vw;
+    }
+  
+    button {
+      font-size: 3.5vw;
+      padding: 2vw 3vw;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 2vh;
+    }
+  }
+  
+  /* GAME OVER 오버레이 */
+/* 공통 오버레이 */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay.victory {
+    background-color: rgba(228, 251, 209, 0.9);
+  }
+  
+  .gameover-box {
+    text-align: center;
+    font-family: 'Jersey 15', sans-serif;
+  }
+  
+  .overlay h1 {
+    font-size: 3vw;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .overlay.victory h1 {
+    color: #1b441d;
+  }
+  
+  .gameover-box button {
+    font-size: 1.5vw;
+    padding: 0.5em 2em;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .overlay.victory button {
+    border-color: #1b441d;
+    color: #1b441d;
+  }
+  
+  .gameover-box button:hover {
+    background: white;
+    color: black;
+  }
+  

@@ -1,19 +1,24 @@
-import React from 'react';
-import './ThrowEnding.css';
-import sadTreeImg from '../assets/images/sadtree.png';
-import bgImage from '../assets/images/main-bg.png';
+// import React from 'react';
+// import './ThrowEnding.css';
+// import sadTreeImg from '../assets/images/sadtree.png';
+// import { useNavigate } from 'react-router-dom';
 
-const ThrowEnding = () => {
-  return (
-    <div
-      className="ending-screen"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
-      <img src={sadTreeImg} alt="sad tree" className="ending-tree" />
-      <h1>💀 You threw the trash...</h1>
-      <p>The forest is sad. Game Over.</p>
-    </div>
-  );
-};
+// const ThrowEnding = () => {
+//   const navigate = useNavigate();
 
-export default ThrowEnding;
+//   const handleRestart = () => {
+//     navigate('/');
+//   };
+
+//   return (
+//     <div className="throw-ending-screen">
+//       <img src={sadTreeImg} alt="fallen tree" className="fallen-tree" />
+//       <h1 className="gameover-text">The tree gave up... 🌲💔</h1>
+//       <button className="restart-btn" onClick={handleRestart}>
+//         Try Again
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default ThrowEnding;

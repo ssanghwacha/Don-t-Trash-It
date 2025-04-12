@@ -12,7 +12,7 @@ const Game = () => {
   const [isThrown, setIsThrown] = useState(false);
   const [isPicked, setIsPicked] = useState(false);
   const [hearts, setHearts] = useState(3);
-  const [treeState, setTreeState] = useState('neutral'); // 'neutral', 'sad', 'happy', 'fall'
+  const [treeState, setTreeState] = useState('neutral'); 
   const [isGameOver, setIsGameOver] = useState(false);
   const [isVictory, setIsVictory] = useState(false);
 

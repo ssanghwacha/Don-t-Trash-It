@@ -2,8 +2,6 @@ import { useState } from 'react';
 import Title from './pages/Title';
 import Loading from './pages/Loading';
 import Game from './pages/Game';
-// import ThrowEnding from './pages/ThrowEnding';
-// import PickEnding from './pages/PickEnding';
 
 function App() {
     const [screen, setScreen] = useState('title');
@@ -26,8 +24,6 @@ function App() {
             {screen === 'game' && (
                 <Game onThrow={handleThrow} onPick={handlePick} />
             )}
-            {/* {screen === 'throw-ending' && <ThrowEnding />}
-            {screen === 'pick-ending' && <PickEnding />} */}
         </>
     );
 }

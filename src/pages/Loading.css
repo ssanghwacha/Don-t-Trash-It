@@ -69,7 +69,6 @@
     }
 }
 
-/* 📱 모바일 대응 */
 @media (max-width: 768px) {
     .dot {
         margin-left: 1vw;
